@@ -57,6 +57,9 @@ fi
 mkdir -p /app &>>LOG_FILE
 VALIDATE $? "App directory"
 
+rm -rf /tmp/backend.zip &>>LOG_FILE
+VALIDATE $? "Remove temp backend"
+
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip  &>>LOG_FILE
 VALIDATE $? "Copy the backend code to temp"
 
