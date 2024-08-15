@@ -48,7 +48,7 @@ id expense &>>LOG_FILE
 
 if [ $? -eq 0 ]
 then 
-    echo "expense user already present $Y SKIPPING $N"
+    echo -e "expense user already present $Y SKIPPING $N"
 else 
     useradd expense &>>LOG_FILE
     VALIDATE $? "useradd expense"
