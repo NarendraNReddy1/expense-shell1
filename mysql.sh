@@ -7,16 +7,16 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
-echo "Enter DB password"
+echo "Enter DB password:ExpenseApp@1"
 read -s mysql_root_password
 
 VALIDATE()
 {
     if [ $1 -ne 0 ]
     then
-        echo "$2 $R $FAILURE $N"
+        echo -e "$2 $R $FAILURE $N"
     else 
-        echo "$2 $G SUCCESS $N"
+        echo -e "$2 $G SUCCESS $N"
 
 
     fi
