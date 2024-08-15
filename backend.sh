@@ -46,7 +46,7 @@ VALIDATE $? "Install nodejs"
 
 id expense &>>LOG_FILE
 
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then 
     echo "expense user already present"
 else 
