@@ -2,8 +2,7 @@
 
 source ./common.sh 
 
-check_root()
-
+check_root
 
 echo "Enter DB password:ExpenseApp@1"
 read -s mysql_root_password
