@@ -25,7 +25,7 @@ then
     echo -e "Password already set $Y SKIPPING $N"
 else 
     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>LOG_FILE
-    VALIDATE $? "start mysqld"
+    VALIDATE $? "Setting password mysqld"
 
 fi
 
