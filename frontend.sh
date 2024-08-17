@@ -1,4 +1,5 @@
 #!/bin/bash
+
 source ./common.sh 
 
 check_root
@@ -24,7 +25,7 @@ VALIDATE $? "Moved to HTML"
 unzip /tmp/frontend.zip &>>LOG_FILE
 VALIDATE $? "Unzip the code"
 
-cp -rf /home/ec2-user/expense-shell/expense.conf /etc/nginx/default.d/expense.conf &>>LOG_FILE
+cp -rf /home/ec2-user/expense-shell1/expense.conf /etc/nginx/default.d/expense.conf &>>LOG_FILE
 VALIDATE $? "Copy code"
 
 systemctl restart nginx &>>LOG_FILE
