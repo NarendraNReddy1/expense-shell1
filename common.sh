@@ -1,4 +1,13 @@
 #!/bin/bash
+
+set -e 
+
+failure(){
+    echo "Failed at $1: $2"
+}
+
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
 USER_ID=$(id -u)
 TIMESTAMP=$(date +%F-%M-%H-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
@@ -8,6 +17,8 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
+
+
 
 
 
@@ -43,3 +54,4 @@ check_root(){
         echo "You are super user"
     fi
 }
+
