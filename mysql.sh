@@ -18,6 +18,7 @@ VALIDATE $? "start mysqld"
 
 
 mysql -h db.narendra.shop -uroot -p${mysql_root_password} -e "Sshow databases" &>>LOG_FILE
+VALIDATE $? "show databases"
 
 if [ $? -eq 0 ]
 then 

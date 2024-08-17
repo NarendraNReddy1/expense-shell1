@@ -1,6 +1,4 @@
 #!/bin/bash
-
-#!/bin/bash
 USER_ID=$(id -u)
 TIMESTAMP=$(date +%F-%M-%H-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
